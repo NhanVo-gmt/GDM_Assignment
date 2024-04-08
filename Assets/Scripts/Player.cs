@@ -6,8 +6,15 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed;
+
+    private Animator anim;
     
     private Vector2 movementInput = Vector2.zero;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -17,10 +24,18 @@ public class Player : MonoBehaviour
     void Move()
     {
         movementInput.x = Input.GetAxisRaw("Horizontal");
-
-        if (movementInput.x != 0)
+        movementInput.y = Input.GetAxisRaw("Vertical");
+        
+        if (movementInput.sqrMagnitude != 0)
         {
+            anim.SetFloat("x", movementInput.x);
+            anim.SetFloat("y", movementInput.y);
+            anim.Play("Walk");
             transform.position += (Vector3)movementInput * speed * Time.deltaTime;
+        }
+        else
+        {
+            anim.Play("Idle");
         }
     }
 }

@@ -7446,7 +7446,7 @@ GameObject:
   - component: {fileID: 2052652565}
   - component: {fileID: 2052652564}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Global Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

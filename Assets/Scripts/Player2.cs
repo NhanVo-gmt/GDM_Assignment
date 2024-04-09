@@ -61,13 +61,19 @@ public class Player2 : MonoBehaviour
     {
         float startTime = Time.time;
         while (startTime + activateDuration >= Time.time)
-        {   
-            light.intensity = Mathf.Lerp(startIntensity, endIntensity, curve.Evaluate(Time.time - startTime / activateDuration));
-            light.pointLightInnerRadius = Mathf.Lerp(startInner, endInner, curve.Evaluate(Time.time - startTime / activateDuration));
-            light.pointLightOuterRadius = Mathf.Lerp(startOuter, endOuter, curve.Evaluate(Time.time - startTime / activateDuration));
+        {
+            float curveValue = curve.Evaluate(Time.time - startTime / activateDuration);
+            light.intensity = Mathf.Lerp(startIntensity, endIntensity, curveValue);
+            light.pointLightInnerRadius = Mathf.Lerp(startInner, endInner, curveValue);
+            light.pointLightOuterRadius = Mathf.Lerp(startOuter, endOuter, curveValue);
+            
+            if (curveValue >= 0.95f)
+            {
+                CameraController.Instance.Shake();
+            }
             yield return null;
         }
-
+        
         yield return new WaitForSeconds(0.5f);
         
         startTime = Time.time;

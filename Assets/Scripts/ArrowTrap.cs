@@ -10,10 +10,11 @@ public class ArrowTrap : MonoBehaviour
     [SerializeField] private Transform spawnPos;
     [SerializeField] private Vector2 attackDirection;
     [SerializeField] private float ShootRate = 3f;
+    [SerializeField] private float delay = 0.5f;
     
     private void Awake()
     {
-        InvokeRepeating("SpawnArrow", 0f, ShootRate);
+        InvokeRepeating("SpawnArrow", delay, ShootRate);
     }
 
     public void SpawnArrow()

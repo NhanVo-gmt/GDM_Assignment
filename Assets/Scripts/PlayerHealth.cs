@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
 
+    public Action<int> OnTakeDamage;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -16,13 +19,14 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-
-        if (currentHealth <= 0 )
+        OnTakeDamage?.Invoke(currentHealth);
+        
+        if (currentHealth <= 0)
         {
             Debug.Log("Player has died!");
-            ReloadCurrentScene();
         }
     }
+    
 
     public void Heal(int healAmount)
     {
@@ -30,10 +34,4 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
 
-    void ReloadCurrentScene()
-    {
-        string sceneName = SceneManager.GetActiveScene().name;
-
-        SceneManager.LoadScene(sceneName);
-    }
 }

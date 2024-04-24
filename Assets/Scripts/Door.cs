@@ -5,20 +5,28 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    Collider2D col
+    [SerializeField] private Item needItem;
+    private Collider2D col;
+
+    private bool isUnlocked = false;
 
     private void Awake()
     {
-        
+        col = GetComponent<Collider2D>();
     }
 
     private void Start()
     {
-        
+        Inventory.Instance.OnAddedItem += UnlockDoor;
     }
 
-    public void Unlock()
+    private void UnlockDoor(Item item)
     {
-        
+        if (isUnlocked) return;
+        if (item == needItem)
+        {
+            isUnlocked = true;
+            //todo unlock
+        }
     }
 }

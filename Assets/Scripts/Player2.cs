@@ -22,11 +22,11 @@ public class Player2 : MonoBehaviour
     
     public float activateDuration;
 
-    private Light2D light;
+    private Light2D light2D;
 
     private void Awake()
     {
-        light = GetComponentInChildren<Light2D>();
+        light2D = GetComponentInChildren<Light2D>();
     }
 
     void Update()
@@ -63,9 +63,9 @@ public class Player2 : MonoBehaviour
         while (startTime + activateDuration >= Time.time)
         {
             float curveValue = curve.Evaluate(Time.time - startTime / activateDuration);
-            light.intensity = Mathf.Lerp(startIntensity, endIntensity, curveValue);
-            light.pointLightInnerRadius = Mathf.Lerp(startInner, endInner, curveValue);
-            light.pointLightOuterRadius = Mathf.Lerp(startOuter, endOuter, curveValue);
+            light2D.intensity = Mathf.Lerp(startIntensity, endIntensity, curveValue);
+            light2D.pointLightInnerRadius = Mathf.Lerp(startInner, endInner, curveValue);
+            light2D.pointLightOuterRadius = Mathf.Lerp(startOuter, endOuter, curveValue);
             
             if (curveValue >= 0.95f)
             {
@@ -79,9 +79,9 @@ public class Player2 : MonoBehaviour
         startTime = Time.time;
         while (startTime + activateDuration >= Time.time)
         {   
-            light.intensity = Mathf.Lerp(endIntensity, startIntensity, curve.Evaluate(Time.time - startTime / activateDuration));
-            light.pointLightInnerRadius = Mathf.Lerp(endInner, startInner, curve.Evaluate(Time.time - startTime / activateDuration));
-            light.pointLightOuterRadius = Mathf.Lerp(endOuter, startOuter, curve.Evaluate(Time.time - startTime / activateDuration));
+            light2D.intensity = Mathf.Lerp(endIntensity, startIntensity, curve.Evaluate(Time.time - startTime / activateDuration));
+            light2D.pointLightInnerRadius = Mathf.Lerp(endInner, startInner, curve.Evaluate(Time.time - startTime / activateDuration));
+            light2D.pointLightOuterRadius = Mathf.Lerp(endOuter, startOuter, curve.Evaluate(Time.time - startTime / activateDuration));
             yield return null;
         }
     }

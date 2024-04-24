@@ -10,6 +10,8 @@ public class Player2 : MonoBehaviour
 
     public float cooldown;
     private float coolDownElapsed = -99f;
+
+    public float radius = 5f;
     
     [Header("Light component")]
     private float startInner = 0f;
@@ -23,6 +25,8 @@ public class Player2 : MonoBehaviour
     public float activateDuration;
 
     private Light2D light2D;
+
+    [SerializeField] private EnergyUI energyUI;
 
     private void Awake()
     {
@@ -47,7 +51,11 @@ public class Player2 : MonoBehaviour
 
     void Activate()
     {
-        if (coolDownElapsed + cooldown > Time.time) return;
+        if (coolDownElapsed + cooldown > Time.time)
+        {
+            UpdateEnergyUI();
+            return;
+        }
         
         
         if (Input.GetKeyDown(KeyCode.Space))
@@ -55,6 +63,11 @@ public class Player2 : MonoBehaviour
             coolDownElapsed = Time.time;
             StartCoroutine(ToggleLightCoroutine());
         }
+    }
+
+    void UpdateEnergyUI()
+    {
+        energyUI.UpdateEnergyUI(Mathf.Min(1, Time.time - coolDownElapsed));
     }
 
     IEnumerator ToggleLightCoroutine()
@@ -69,6 +82,7 @@ public class Player2 : MonoBehaviour
             
             if (curveValue >= 0.95f)
             {
+                StunEnemy();
                 CameraController.Instance.Shake();
             }
             yield return null;
@@ -84,5 +98,22 @@ public class Player2 : MonoBehaviour
             light2D.pointLightOuterRadius = Mathf.Lerp(endOuter, startOuter, curve.Evaluate(Time.time - startTime / activateDuration));
             yield return null;
         }
+    }
+
+    void StunEnemy()
+    {
+        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, radius);
+        foreach (Collider2D col in cols)
+        {
+            if (col.TryGetComponent<EnemyPatrol>(out EnemyPatrol enemy))
+            {
+                enemy.Stun();
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }

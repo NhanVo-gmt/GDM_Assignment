@@ -15,6 +15,8 @@ public class EnemyPatrol : MonoBehaviour
     private Vector3 currentTarget;
     private bool isChasing = false;
 
+    private bool isStun = false;
+
     void Start()
     {
         currentTarget = waypoints[waypointIndex].position;
@@ -40,6 +42,8 @@ public class EnemyPatrol : MonoBehaviour
             {
                 isChasing = false;
             }
+
+            if (isStun) return;
 
             if (isChasing)
             {
@@ -87,7 +91,18 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
-    
+    public void Stun()
+    {
+        StartCoroutine(StunCoroutine());
+    }
+
+    IEnumerator StunCoroutine()
+    {
+        isStun = true;
+        yield return new WaitForSeconds(2f);
+
+        isStun = false;
+    }
 
 
 }

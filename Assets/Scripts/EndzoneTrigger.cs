@@ -9,7 +9,7 @@ public class EndzoneTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("EndScene");
         }
     }
 }

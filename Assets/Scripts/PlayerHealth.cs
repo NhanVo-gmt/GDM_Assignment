@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
 
     public float coolDown = 3f;
+    public AudioClip hitClip;
 
     public Action<int> OnTakeDamage;
 
@@ -34,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
         StartBlinking();
         GameManager.Instance.Sleep(0.3f);
         CameraController.Instance.Shake();
+        AudioManager.Instance.PlayOneShot(hitClip);
         
         if (currentHealth <= 0)
         {

@@ -15311,6 +15311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   coolDown: 3
+  hitClip: {fileID: 8300000, guid: f125083af25a665448384dddf0d15c1c, type: 3}
 --- !u!81 &1565827350
 AudioListener:
   m_ObjectHideFlags: 0
@@ -16061,6 +16062,7 @@ GameObject:
   - component: {fileID: 1676101076}
   - component: {fileID: 1676101078}
   - component: {fileID: 1676101079}
+  - component: {fileID: 1676101080}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -16202,6 +16204,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd8473fe376ab9e4bacc211d3e2c01de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1676101080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676101075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae28150c227d2c545a9201fa54f59cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1692024824

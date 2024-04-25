@@ -27,9 +27,9 @@ public class SpikeTrap : MonoBehaviour
         Collider2D[] cols = Physics2D.OverlapBoxAll(transform.position, box.size, 0);
         foreach (Collider2D col in cols)
         {
-            if (col.CompareTag("Player"))
+            if (col.TryGetComponent<PlayerHealth>(out PlayerHealth health))
             {
-                //todo
+                health.TakeDamage(1);
             }
         }
     }

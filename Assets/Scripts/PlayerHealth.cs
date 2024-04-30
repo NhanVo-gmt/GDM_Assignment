@@ -15,12 +15,11 @@ public class PlayerHealth : MonoBehaviour
     public Action<int> OnTakeDamage;
 
     private SpriteRenderer sprite;
-    private Collider2D col;
+    private bool canAttack = true;
 
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
-        col = GetComponent<Collider2D>();
     }
 
     void Start()
@@ -30,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
+        if (!canAttack) return;
+        
         currentHealth -= damageAmount;
         OnTakeDamage?.Invoke(currentHealth);
         StartBlinking();
@@ -57,7 +58,7 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator Blinking()
     {
-        col.enabled = false;
+        canAttack = false;
         yield return new WaitForSeconds(0.1f);
         float startTime = Time.time;
 
@@ -69,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
 
         yield return null;
 
-        col.enabled = true;
+        canAttack = true;
         sprite.enabled = true;
     }
 

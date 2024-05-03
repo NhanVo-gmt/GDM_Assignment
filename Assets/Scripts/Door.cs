@@ -1,32 +1,42 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] private Item needItem;
     private Collider2D col;
 
     private bool isUnlocked = false;
 
+    private List<Activator> Activators = new List<Activator>();
+    private int numUnlock = 0;
+
+    private Animator anim;
+
     private void Awake()
     {
         col = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
+        Activators = GetComponentsInChildren<Activator>().ToList();
+        foreach (Activator act in Activators)
+        {
+            act.OnActivate += UnlockDoor;
+        }
     }
 
     private void Start()
     {
-        Inventory.Instance.OnAddedItem += UnlockDoor;
+        
     }
 
-    private void UnlockDoor(Item item)
+    private void UnlockDoor()
     {
-        if (isUnlocked) return;
-        if (item == needItem)
+        numUnlock++;
+        if (numUnlock == Activators.Count - 1)
         {
-            isUnlocked = true;
-            //todo unlock
+            anim.Play("Unlock");
         }
     }
 }

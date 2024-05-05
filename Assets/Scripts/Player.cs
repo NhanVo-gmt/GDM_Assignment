@@ -28,10 +28,12 @@ public class Player : MonoBehaviour
         
         if (movementInput.sqrMagnitude != 0)
         {
+            Vector2 normalizedInput = movementInput.normalized;
+
             anim.SetFloat("x", movementInput.x);
             anim.SetFloat("y", movementInput.y);
             anim.Play("Walk");
-            transform.position += (Vector3)movementInput * speed * Time.deltaTime;
+            transform.position += (Vector3)normalizedInput * speed * Time.deltaTime;
         }
         else
         {

@@ -6,7 +6,7 @@ public class EnemyPatrol : MonoBehaviour
 {
     public Transform[] waypoints;
     public float patrolSpeed = 2f;
-    public float chaseSpeed = 3f;
+    public float chaseSpeed = 4f;
     public float detectionRadius = 5f;
 
     private Transform playerTransform;

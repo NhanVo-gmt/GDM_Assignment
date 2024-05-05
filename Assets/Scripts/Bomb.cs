@@ -3,28 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeTrap : MonoBehaviour
+public class Bomb : MonoBehaviour
 {
-    [SerializeField] private float delay = 0.5f;
     private Animator anim;
-    private BoxCollider2D box;
+    private CircleCollider2D circle;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        box = GetComponent<BoxCollider2D>();
-        
-        Invoke("PlayTrap", delay);
+        circle = GetComponent<CircleCollider2D>();
     }
 
     void PlayTrap()
     {
-        anim.Play("Trap");
+        anim.Play("Idle");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayTrap();
+        }
     }
 
     void Attack()
     {
-        Collider2D[] cols = Physics2D.OverlapBoxAll(transform.position, box.size, 0);
+        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, circle.radius);
         foreach (Collider2D col in cols)
         {
             if (col.TryGetComponent<PlayerHealth>(out PlayerHealth health))

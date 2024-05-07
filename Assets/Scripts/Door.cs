@@ -32,10 +32,9 @@ public class Door : MonoBehaviour
     private void UnlockDoor()
     {
         numUnlock++;
-        Destroy(gameObject);
-        if (numUnlock == Activators.Count - 1)
+        if (numUnlock >= Activators.Count)
         {
-            // anim.Play("Unlock");
+            Destroy(this.gameObject);
         }
     }
 }

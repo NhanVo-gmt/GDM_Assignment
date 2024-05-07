@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IStunable
 {
     public float radius;
     public float patrolSpeed = 2f;
@@ -19,9 +19,12 @@ public class Enemy : MonoBehaviour
     private bool isStun = false;
 
     private Vector3 startPos;
+
+    private Animator anim;
     
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         startPos = transform.position;
     }
 
@@ -106,10 +109,13 @@ public class Enemy : MonoBehaviour
     IEnumerator StunCoroutine()
     {
         isStun = true;
+        anim.Play("Idle");
         yield return new WaitForSeconds(2f);
 
+        anim.Play("Move");
         isStun = false;
     }
+
 
 
 }

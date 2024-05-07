@@ -67,7 +67,7 @@ public class Player2 : MonoBehaviour
 
     void UpdateEnergyUI()
     {
-        energyUI.UpdateEnergyUI(Mathf.Min(1, Time.time - coolDownElapsed));
+        energyUI.UpdateEnergyUI(Mathf.Min(1, (Time.time - coolDownElapsed) / cooldown));
     }
 
     IEnumerator ToggleLightCoroutine()
@@ -105,7 +105,7 @@ public class Player2 : MonoBehaviour
         Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, radius);
         foreach (Collider2D col in cols)
         {
-            if (col.TryGetComponent<EnemyPatrol>(out EnemyPatrol enemy))
+            if (col.TryGetComponent<IStunable>(out IStunable enemy))
             {
                 enemy.Stun();
             }

@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour, IStunable
 {
     public Transform[] waypoints;
     public float patrolSpeed = 2f;
@@ -16,6 +17,13 @@ public class EnemyPatrol : MonoBehaviour
     private bool isChasing = false;
 
     private bool isStun = false;
+
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Start()
     {
@@ -99,8 +107,10 @@ public class EnemyPatrol : MonoBehaviour
     IEnumerator StunCoroutine()
     {
         isStun = true;
+        anim.Play("Idle");
         yield return new WaitForSeconds(2f);
 
+        anim.Play("Move");
         isStun = false;
     }
 

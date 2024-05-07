@@ -17,7 +17,7 @@ public class TreasureEnemy : MonoBehaviour, IStunable, ILightable
     private bool isTakingLight = false;
 
     private float takeLightTime = 0f;
-    private float takeLightMax = 3f;
+    private float takeLightMax = 2f;
 
     private Animator anim;
     private ParticleSystem particle;

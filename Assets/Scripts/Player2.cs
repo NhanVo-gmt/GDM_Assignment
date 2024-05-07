@@ -112,6 +112,22 @@ public class Player2 : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.TryGetComponent<ILightable>(out ILightable target))
+        {
+            target.TakeLight();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent<ILightable>(out ILightable target))
+        {
+            target.StopTakeLight();
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, radius);

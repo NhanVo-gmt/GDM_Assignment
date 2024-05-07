@@ -25,6 +25,7 @@ public class Player2 : MonoBehaviour
     public float activateDuration;
 
     private Light2D light2D;
+    private bool turnOff = false;
 
     [SerializeField] private EnergyUI energyUI;
 
@@ -37,6 +38,24 @@ public class Player2 : MonoBehaviour
     {
         Move();
         Activate();
+        ToggleLight();
+    }
+
+    private void ToggleLight()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            turnOff = !turnOff;
+            if (turnOff)
+            {
+                light2D.intensity = 0f;
+                // todo play music
+            }
+            else
+            {
+                light2D.intensity = startIntensity;
+            }
+        }
     }
 
     void Move()
@@ -51,6 +70,8 @@ public class Player2 : MonoBehaviour
 
     void Activate()
     {
+        if (turnOff) return;
+        
         if (coolDownElapsed + cooldown > Time.time)
         {
             UpdateEnergyUI();
@@ -61,7 +82,7 @@ public class Player2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             coolDownElapsed = Time.time;
-            StartCoroutine(ToggleLightCoroutine());
+            StartCoroutine(ActivateLightCoroutine());
         }
     }
 
@@ -70,7 +91,7 @@ public class Player2 : MonoBehaviour
         energyUI.UpdateEnergyUI(Mathf.Min(1, (Time.time - coolDownElapsed) / cooldown));
     }
 
-    IEnumerator ToggleLightCoroutine()
+    IEnumerator ActivateLightCoroutine()
     {
         float startTime = Time.time;
         while (startTime + activateDuration >= Time.time)

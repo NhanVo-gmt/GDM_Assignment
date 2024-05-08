@@ -36,9 +36,7 @@ public class SleepDemon : MonoBehaviour, ILightable
         _startPos.y = transform.position.y;
         playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
-    
-    
-    
+
     private void Update()
     {
         if (isChasing)

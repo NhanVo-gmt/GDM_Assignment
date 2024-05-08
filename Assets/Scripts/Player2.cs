@@ -25,13 +25,16 @@ public class Player2 : MonoBehaviour
     public float activateDuration;
 
     private Light2D light2D;
+    private Collider2D col;
     private bool turnOff = false;
 
     [SerializeField] private EnergyUI energyUI;
 
     private void Awake()
     {
+        col = GetComponent<Collider2D>();
         light2D = GetComponentInChildren<Light2D>();
+        energyUI = FindObjectOfType<EnergyUI>();
     }
 
     void Update()
@@ -49,11 +52,13 @@ public class Player2 : MonoBehaviour
             if (turnOff)
             {
                 light2D.intensity = 0f;
+                col.enabled = false;
                 // todo play music
             }
             else
             {
                 light2D.intensity = startIntensity;
+                col.enabled = true;
             }
         }
     }

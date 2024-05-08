@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5fbfb070b2e70484f9f4c15854673eb0
+guid: 80bfeeba964c1294594d8ec35893e181
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sleep_0
+      name: Move_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d78bf0938933f8489140d1948f0e508
-      internalID: 10656429
+      spriteID: 1a3f1592cb8707e47ac4178f18fe7bf1
+      internalID: 32405043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sleep_1
+      name: Move_1
       rect:
         serializedVersion: 2
         x: 79
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07934ba16d612334ca95bbb2ffd7aaef
-      internalID: -406313627
+      spriteID: 4a8b778d2bd411d4e93c5212afe7ddb2
+      internalID: 32093322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sleep_2
+      name: Move_2
       rect:
         serializedVersion: 2
         x: 158
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bad5594ef01a3a64698b41a02a25039f
-      internalID: -1495564004
+      spriteID: e47fc3282951b5b44b31e193122b7e7b
+      internalID: 286959617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sleep_3
+      name: Move_3
       rect:
         serializedVersion: 2
         x: 237
@@ -208,8 +208,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fcdf28a87e13fb449c005459b186636
-      internalID: 1737036095
+      spriteID: 82ff2bbbf228de14086e4bdd163bb8a3
+      internalID: -1663400610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_4
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 0
+        width: 79
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4337d820185863f4fb26f2e3188a84ee
+      internalID: -1820025401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_5
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 79
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee66085e6204bc045b6b0d6902ffd882
+      internalID: -1676828767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_6
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 0
+        width: 79
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c31f96723f43c140946349f96edbf57
+      internalID: -33411217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_7
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 0
+        width: 79
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfed10e3c6f5774697f42e296b0077a
+      internalID: -1675829469
       vertices: []
       indices: 
       edges: []
@@ -225,10 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sleep_0: 10656429
-      Sleep_1: -406313627
-      Sleep_2: -1495564004
-      Sleep_3: 1737036095
+      Move_0: 32405043
+      Move_1: 32093322
+      Move_2: 286959617
+      Move_3: -1663400610
+      Move_4: -1820025401
+      Move_5: -1676828767
+      Move_6: -33411217
+      Move_7: -1675829469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

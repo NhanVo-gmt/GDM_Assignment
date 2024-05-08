@@ -13,6 +13,7 @@ public class LifeUI : MonoBehaviour
     
     private void Awake()
     {
+        health = FindObjectOfType<PlayerHealth>();
         health.OnTakeDamage += UpdateHealthUI;
         SpawnHealthUI(health.maxHealth);
     }

@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip hitClip;
 
     public Action<int> OnTakeDamage;
+    public Action OnDie;
 
     private SpriteRenderer sprite;
     private bool canAttack = true;
@@ -40,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
         
         if (currentHealth <= 0)
         {
+            OnDie?.Invoke();
             Debug.Log("Player has died!");
         }
     }

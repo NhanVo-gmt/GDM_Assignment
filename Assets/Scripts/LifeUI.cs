@@ -2,15 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class LifeUI : MonoBehaviour
 {
     [SerializeField] private GameObject singleImage;
     [SerializeField] private PlayerHealth health;
-    [SerializeField] private CanvasGroup loseScreen;
 
     private List<GameObject> singleImageList = new List<GameObject>();
-    
+
     private void Awake()
     {
         health = FindObjectOfType<PlayerHealth>();
@@ -37,14 +37,6 @@ public class LifeUI : MonoBehaviour
         {
             singleImageList[i].SetActive(false);
         }
-        
-        if (newHealth <= 0) OpenLoseScreen();
     }
-
-    private void OpenLoseScreen()
-    {
-        loseScreen.alpha = 1;
-        loseScreen.interactable = true;
-        loseScreen.blocksRaycasts = true;
-    }
+    
 }

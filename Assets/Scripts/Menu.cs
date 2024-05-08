@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public static Menu Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void RestartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneLoader.Instance.RestartGame();
     }
+
     
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneLoader.Instance.StartGame();
     }
+    
+
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneLoader.Instance.RestartLevel();
     }
+    
+
 
     public void Exit()
     {
@@ -27,6 +40,6 @@ public class Menu : MonoBehaviour
 
     public void LoadLevel(int level)
     {
-        SceneManager.LoadScene(level + 1);
+        SceneLoader.Instance.LoadLevel(level);
     }
 }

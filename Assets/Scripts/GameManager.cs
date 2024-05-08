@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     private Player player;
     private Menu menu;
 
+    private bool isPaused = false;
+
+    [SerializeField] private CanvasGroup settingHolder;
+
     private void Awake()
     {
         Instance = this;
@@ -21,6 +25,30 @@ public class GameManager : MonoBehaviour
         playerGO.GetComponent<PlayerHealth>().OnDie += RestartScene;
 
         menu = GetComponentInChildren<Menu>();
+    }
+
+    public void Pause()
+    {
+        isPaused = !isPaused;
+        if (isPaused)
+        {
+            settingHolder.interactable = true;
+            settingHolder.blocksRaycasts = true;
+            settingHolder.alpha = 1;
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            settingHolder.interactable = false;
+            settingHolder.blocksRaycasts = false;
+            settingHolder.alpha = 0;
+            Time.timeScale = 1f;
+        }
+    }
+
+    public void Quit()
+    {
+        menu.RestartGame();
     }
 
 

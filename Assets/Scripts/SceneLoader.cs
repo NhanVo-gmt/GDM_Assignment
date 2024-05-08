@@ -23,39 +23,24 @@ public class SceneLoader : MonoBehaviour
 
     public void RestartGame()
     {
-        StartCoroutine(RestartGameCoroutine());
+        StartCoroutine(LoadLevelCoroutine(0));
     }
 
-    IEnumerator RestartGameCoroutine()
-    {
-        yield return SceneLoaderUI.Instance.FadeIn();
-        SceneManager.LoadScene(0);
-        
-        yield return SceneLoaderUI.Instance.FadeOut();
-    }
     
     public void StartGame()
     {
-        StartCoroutine(StartGameCoroutine());
+        StartCoroutine(LoadLevelCoroutine(1));
     }
     
-    IEnumerator StartGameCoroutine()
-    {
-        yield return SceneLoaderUI.Instance.FadeIn();
-        SceneManager.LoadScene(1);
-        
-        yield return SceneLoaderUI.Instance.FadeOut();
-    }
-
     public void RestartLevel()
     {
-        StartCoroutine(RestartLevelCoroutine());
+        StartCoroutine(LoadLevelCoroutine(SceneManager.GetActiveScene().buildIndex));
     }
     
-    IEnumerator RestartLevelCoroutine()
+    IEnumerator LoadLevelCoroutine(int buildIndex)
     {
         yield return SceneLoaderUI.Instance.FadeIn();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(buildIndex);
         
         yield return SceneLoaderUI.Instance.FadeOut();
     }
@@ -67,6 +52,6 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel(int level)
     {
-        SceneManager.LoadScene(level + 1);
+        StartCoroutine(LoadLevelCoroutine(level+1));
     }
 }

@@ -5,18 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Rock
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Post processing
   - Water
   - UI
   - Player
   - Wall
   - Enemy
   - Decoration
-  - 
+  - IgnoreWall
   - 
   - 
   - 

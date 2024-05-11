@@ -16,7 +16,7 @@ public class RedSmile : MonoBehaviour, ILightable, IStunable
     private bool isDead = false;
     private bool isTakingLight = false;
     private float timeTakingLightElapse = 0f;
-    private float timeTakingLightElapseMax = 2f;
+    [SerializeField] private float timeTakingLightElapseMax = 2f;
 
     private Animator anim;
     private ParticleSystem particleSystem;

@@ -13,9 +13,14 @@ public class GameManager : MonoBehaviour
     private Menu menu;
 
     private bool isPaused = false;
+    private bool isPhase2 = false;
 
     [SerializeField] private CanvasGroup settingHolder;
     [SerializeField] private BookUI bookUI;
+
+    [SerializeField] private Boss boss;
+    [SerializeField] private Transform positionPhase2;
+    
 
     private void Awake()
     {
@@ -79,5 +84,15 @@ public class GameManager : MonoBehaviour
     {
         bookUI.SetText(text);
         bookUI.Toggle(true);
+    }
+
+    public void Phase2()
+    {
+        if (isPhase2) return;
+        
+        isPhase2 = true;
+        CameraController.Instance.ShakeStrong();
+        boss.Phase2();
+        boss.transform.position = positionPhase2.position;
     }
 }

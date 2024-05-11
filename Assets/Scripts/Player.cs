@@ -38,4 +38,12 @@ public class Player : MonoBehaviour
             anim.Play("Idle");
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Transform"))
+        {
+            GameManager.Instance.Phase2();
+        }
+    }
 }

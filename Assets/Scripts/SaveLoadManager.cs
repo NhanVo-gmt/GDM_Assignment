@@ -49,7 +49,7 @@ public class SaveLoadManager : MonoBehaviour
             GameObject.FindWithTag("Player").transform.position = playerCheckPoint;
         }
 
-        if (BookList.Count == 4)
+        if (HasEnoughBook())
         {
             CanvasGroup canvasGroup = GameObject.FindWithTag("HiddenLevel").GetComponent<CanvasGroup>();
             canvasGroup.alpha = 1;
@@ -93,8 +93,8 @@ public class SaveLoadManager : MonoBehaviour
         return false;
     }
 
-    public int GetBookCount()
+    public bool HasEnoughBook()
     {
-        return BookList.Count;
+        return BookList.Count >= 4;
     }
 }

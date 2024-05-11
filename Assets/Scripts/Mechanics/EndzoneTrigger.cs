@@ -9,7 +9,18 @@ public class EndzoneTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetSceneByName("LevelScene").buildIndex);
+            if (SceneManager.GetActiveScene().buildIndex == 6)
+            {
+                SceneManager.LoadScene(7);
+                return;
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 5 && !SaveLoadManager.Instance.HasEnoughBook())
+            {
+                SceneManager.LoadScene(7);
+                return;
+            }
+            
+            SceneManager.LoadScene(1);
         }
     }
 }

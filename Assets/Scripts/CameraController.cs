@@ -20,6 +20,12 @@ public class CameraController : MonoBehaviour
         m_BasicMultiChannelPerlin = virtualCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
+    public void ShakeStrong()
+    {
+        m_BasicMultiChannelPerlin.m_AmplitudeGain = 1f;
+        m_BasicMultiChannelPerlin.m_FrequencyGain = .2f;
+    }
+
     public void Shake()
     {
         if (isShaking) return;

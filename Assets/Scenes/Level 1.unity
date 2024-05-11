@@ -14834,51 +14834,11 @@ Transform:
   m_Father: {fileID: 46061334}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1529610100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1418762471376266701, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
-  m_PrefabInstance: {fileID: 1418762470656465593}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1529610102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418762471376266703, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
   m_PrefabInstance: {fileID: 1418762470656465593}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &1529610104
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529610100}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!4 &1565827345 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1565827345, guid: cfd12235a2371534fbfa917b7cd0ab15, type: 3}
@@ -42482,9 +42442,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1418762471376266701, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1529610104}
     - targetCorrespondingSourceObject: {fileID: 181329830, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}

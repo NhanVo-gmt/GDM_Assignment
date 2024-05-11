@@ -48,6 +48,14 @@ public class SaveLoadManager : MonoBehaviour
         {
             GameObject.FindWithTag("Player").transform.position = playerCheckPoint;
         }
+
+        if (BookList.Count == 4)
+        {
+            CanvasGroup canvasGroup = GameObject.FindWithTag("HiddenLevel").GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 1;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
     }
     
     public void SetCheckpoint(Vector2 newCheckpoint)

@@ -56,7 +56,7 @@ public class SleepDemon : MonoBehaviour, ILightable
                 anim.Play("Move");
             }
         }
-        else
+        else if (timeAngryElapse > 0f)
         {
             timeAngryElapse -= Time.deltaTime;
         }

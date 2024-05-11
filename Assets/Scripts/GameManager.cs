@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private bool isPaused = false;
 
     [SerializeField] private CanvasGroup settingHolder;
+    [SerializeField] private BookUI bookUI;
 
     private void Awake()
     {
@@ -72,5 +73,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1f;
         
+    }
+
+    public void PickupBook(string text)
+    {
+        bookUI.SetText(text);
+        bookUI.Toggle(true);
     }
 }

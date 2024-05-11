@@ -25,10 +25,7 @@ public class Door : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        
-    }
+    
     private void UnlockDoor()
     {
         numUnlock++;

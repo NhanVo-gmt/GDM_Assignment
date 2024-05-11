@@ -133,6 +133,7 @@ public class TreasureEnemy : MonoBehaviour, IStunable, ILightable
     public void StopTakeLight()
     {
         isTakingLight = false;
+        particle.Stop();
     }
 }
 

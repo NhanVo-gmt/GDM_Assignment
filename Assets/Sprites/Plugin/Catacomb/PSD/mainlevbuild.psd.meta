@@ -1747,6 +1747,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: mainlevbuild_77
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 519
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c30d1824963c842a1b5280dbd7979e
+      internalID: 1102641661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1833,6 +1854,7 @@ TextureImporter:
       mainlevbuild_74: 829544762
       mainlevbuild_75: -1271645022
       mainlevbuild_76: 1715799608
+      mainlevbuild_77: 1102641661
       mainlevbuild_8: -553946639
       mainlevbuild_9: -1263677131
   mipmapLimitGroupName: 

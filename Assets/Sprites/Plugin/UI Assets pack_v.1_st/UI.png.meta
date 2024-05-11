@@ -7585,6 +7585,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: book
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9927108ab5c3adb4cb8648ad080cfdc5
+      internalID: -1204655502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -7949,6 +7970,7 @@ TextureImporter:
       UI_97: -216730100
       UI_98: 1325045378
       UI_99: 1925622385
+      book: -1204655502
       button_UI: -707001536
       dashboard: -1840969483
       setting_ui: -970525127

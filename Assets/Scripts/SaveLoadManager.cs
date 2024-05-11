@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class SaveLoadManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class SaveLoadManager : MonoBehaviour
 
     public Vector2 playerCheckPoint;
     public int sceneIndex;
+    public List<string> keys = new List<string>();
+    public List<string> BookList = new List<string>();
 
     private void Awake()
     {
@@ -25,19 +28,21 @@ public class SaveLoadManager : MonoBehaviour
         }
 
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        playerCheckPoint = GameObject.FindWithTag("Player").transform.position;
     }
 
     private void Start()
     {
-        SceneManager.sceneLoaded += ResetStartPos;
+        SceneManager.sceneLoaded += ResetOnSceneLoad;
     }
 
-    private void ResetStartPos(Scene scene, LoadSceneMode arg1)
+    private void ResetOnSceneLoad(Scene scene, LoadSceneMode arg1)
     {
         if (sceneIndex != scene.buildIndex)
         {
             sceneIndex = scene.buildIndex;
             playerCheckPoint = GameObject.FindWithTag("Player").transform.position;
+            keys = new List<string>();
         }
         else
         {
@@ -48,5 +53,40 @@ public class SaveLoadManager : MonoBehaviour
     public void SetCheckpoint(Vector2 newCheckpoint)
     {
         playerCheckPoint = newCheckpoint;
+    }
+
+    public void AddKey(string id)
+    {
+        if (HasKey(id)) return;
+        
+        keys.Add(id);
+    }
+
+    public bool HasKey(string id)
+    {
+        return keys.IndexOf(id) != -1;
+    }
+
+    public int GetKeyCount()
+    {
+        return keys.Count;
+    }
+
+    public void AddBook(string id)
+    {
+        if (HasBook(id)) return;
+        
+        BookList.Add(id);
+    }
+    
+    public bool HasBook(string id)
+    {
+        if (BookList.Contains(id)) return true;
+        return false;
+    }
+
+    public int GetBookCount()
+    {
+        return BookList.Count;
     }
 }

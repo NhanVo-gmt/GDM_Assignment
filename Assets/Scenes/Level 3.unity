@@ -313,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1520863909659616902, guid: b2740b9d963101c41b3e5a004bee44be, type: 3}
       propertyPath: m_text
-      value: "Don't wake up \nthe monster"
+      value: "Don't wake up \nthe monsters"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1431,7 +1431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.9, y: 27.4, z: -10.258375}
+  m_LocalPosition: {x: 18.580002, y: -4.59, z: -10.258375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1529,72 +1529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 1665504657}
---- !u!1001 &521612376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2019202942}
-    m_Modifications:
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.846577
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.1054459
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.3248879
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1171529943906317278, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-      propertyPath: m_Name
-      value: TreasureEnemy (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
---- !u!4 &521612377 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1171529943906317272, guid: 8d38c65506e27b14581839ee4f650573, type: 3}
-  m_PrefabInstance: {fileID: 521612376}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &537472037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1610,6 +1544,14 @@ PrefabInstance:
     - target: {fileID: 828554545, guid: cfd12235a2371534fbfa917b7cd0ab15, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565827345, guid: cfd12235a2371534fbfa917b7cd0ab15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -48.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565827345, guid: cfd12235a2371534fbfa917b7cd0ab15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -31.99
       objectReference: {fileID: 0}
     - target: {fileID: 8431887172947077344, guid: cfd12235a2371534fbfa917b7cd0ab15, type: 3}
       propertyPath: m_RootOrder
@@ -6951,9 +6893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1520863909659616902, guid: b2740b9d963101c41b3e5a004bee44be, type: 3}
       propertyPath: m_text
-      value: 'Don''t fall
-
-        or try to'
+      value: Try not to fall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70542,7 +70482,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1520863909659616902, guid: b2740b9d963101c41b3e5a004bee44be, type: 3}
       propertyPath: m_text
-      value: "U can turn off \nby pressing e"
+      value: 'Turn off the light
+
+        with E'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -71214,7 +71156,7 @@ PrefabInstance:
       propertyPath: m_text
       value: 'You''re closer
 
-        to exit
+        to the exit
 
         or HIM'
       objectReference: {fileID: 0}
@@ -71387,7 +71329,6 @@ Transform:
   - {fileID: 737301420}
   - {fileID: 1872608966}
   - {fileID: 1351722247}
-  - {fileID: 521612377}
   - {fileID: 451197684}
   - {fileID: 399578716}
   - {fileID: 915018481}

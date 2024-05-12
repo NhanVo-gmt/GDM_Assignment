@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed;
 
     private Animator anim;
-    
+
     private Vector2 movementInput = Vector2.zero;
 
     private void Awake()
@@ -25,12 +25,15 @@ public class Player : MonoBehaviour
     {
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
-        
-        if (movementInput.sqrMagnitude != 0)
+
+        if (movementInput != Vector2.zero)
         {
+            movementInput.Normalize();
+
             anim.SetFloat("x", movementInput.x);
             anim.SetFloat("y", movementInput.y);
             anim.Play("Walk");
+
             transform.position += (Vector3)movementInput * speed * Time.deltaTime;
         }
         else

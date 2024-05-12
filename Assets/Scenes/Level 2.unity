@@ -255,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190883294786778021, guid: face1d6f1f8f80140a0c3fd581aaa110, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2
+      value: -10.09
       objectReference: {fileID: 0}
     - target: {fileID: 3190883294786778021, guid: face1d6f1f8f80140a0c3fd581aaa110, type: 3}
       propertyPath: m_LocalPosition.y
@@ -263,19 +263,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316841528460994225, guid: face1d6f1f8f80140a0c3fd581aaa110, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.33
+      value: -16.5
       objectReference: {fileID: 0}
     - target: {fileID: 5316841528460994225, guid: face1d6f1f8f80140a0c3fd581aaa110, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 5357513796997945740, guid: face1d6f1f8f80140a0c3fd581aaa110, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4
+      value: -16.72
       objectReference: {fileID: 0}
     - target: {fileID: 5357513796997945740, guid: face1d6f1f8f80140a0c3fd581aaa110, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.9
+      value: 0.54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2253,6 +2253,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383444561}
     m_Modifications:
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7096157
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.14519215
+      objectReference: {fileID: 0}
     - target: {fileID: 1777725014939338067, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
       propertyPath: m_Name
       value: Flame (3)
@@ -2477,11 +2485,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3960265024020132547, guid: 91c550f18ea1ba347a876f197e1217ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.1
+      value: 30.13
       objectReference: {fileID: 0}
     - target: {fileID: 3960265024020132547, guid: 91c550f18ea1ba347a876f197e1217ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.9
+      value: 54.21
       objectReference: {fileID: 0}
     - target: {fileID: 3960265024020132547, guid: 91c550f18ea1ba347a876f197e1217ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2950,6 +2958,14 @@ PrefabInstance:
     - target: {fileID: 2389177435791047433, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
       propertyPath: m_SortingLayerID
       value: 244514301
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5199175
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.24004126
       objectReference: {fileID: 0}
     - target: {fileID: 2389177435791047477, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
       propertyPath: m_Name
@@ -3559,6 +3575,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 244514301
       objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3772392
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.3113804
+      objectReference: {fileID: 0}
     - target: {fileID: 2389177435791047477, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
       propertyPath: m_Name
       value: Flame_hor (8)
@@ -3581,6 +3605,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383444561}
     m_Modifications:
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5701313
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.21493435
+      objectReference: {fileID: 0}
     - target: {fileID: 1777725014939338067, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
       propertyPath: m_Name
       value: Flame (4)
@@ -15609,6 +15641,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383444561}
     m_Modifications:
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7510986
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.12445068
+      objectReference: {fileID: 0}
     - target: {fileID: 1777725014939338067, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
       propertyPath: m_Name
       value: Flame
@@ -16639,11 +16679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3960265024020132547, guid: 91c550f18ea1ba347a876f197e1217ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.9
+      value: 29.32
       objectReference: {fileID: 0}
     - target: {fileID: 3960265024020132547, guid: 91c550f18ea1ba347a876f197e1217ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.9
+      value: 50.24
       objectReference: {fileID: 0}
     - target: {fileID: 3960265024020132547, guid: 91c550f18ea1ba347a876f197e1217ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16834,6 +16874,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383444561}
     m_Modifications:
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6681328
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.16593361
+      objectReference: {fileID: 0}
     - target: {fileID: 1777725014939338067, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
       propertyPath: m_Name
       value: Flame (1)
@@ -17244,7 +17292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1520863909659616902, guid: b2740b9d963101c41b3e5a004bee44be, type: 3}
       propertyPath: m_text
-      value: Bomb is lurking
+      value: Bombs are lurking
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17844,7 +17892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1520863909659616902, guid: b2740b9d963101c41b3e5a004bee44be, type: 3}
       propertyPath: m_text
-      value: "Not be greedy \nwith treasure"
+      value: "Don't be greedy \nwith treasure"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -48185,6 +48233,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383444561}
     m_Modifications:
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7096157
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777725014939338066, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.14519215
+      objectReference: {fileID: 0}
     - target: {fileID: 1777725014939338067, guid: fd41ccdbb917e7e4390760823e6bb557, type: 3}
       propertyPath: m_Name
       value: Flame (2)
@@ -49841,6 +49897,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 244514301
       objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4535713
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.27321434
+      objectReference: {fileID: 0}
     - target: {fileID: 2389177435791047477, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
       propertyPath: m_Name
       value: Flame_hor (4)
@@ -50491,6 +50555,14 @@ PrefabInstance:
     - target: {fileID: 2389177435791047433, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
       propertyPath: m_SortingLayerID
       value: 244514301
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3990616
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389177435791047435, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.30051917
       objectReference: {fileID: 0}
     - target: {fileID: 2389177435791047477, guid: 2f8f6dc3864b4754a908206db4a04438, type: 3}
       propertyPath: m_Name

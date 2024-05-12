@@ -51,10 +51,14 @@ public class SaveLoadManager : MonoBehaviour
 
         if (HasEnoughBook())
         {
-            CanvasGroup canvasGroup = GameObject.FindWithTag("HiddenLevel").GetComponent<CanvasGroup>();
-            canvasGroup.alpha = 1;
-            canvasGroup.interactable = true;
-            canvasGroup.blocksRaycasts = true;
+            GameObject hiddenGO = GameObject.FindWithTag("HiddenLevel");
+            if (hiddenGO)
+            {
+                CanvasGroup canvasGroup = hiddenGO.GetComponent<CanvasGroup>();
+                canvasGroup.alpha = 1;
+                canvasGroup.interactable = true;
+                canvasGroup.blocksRaycasts = true;
+            }
         }
     }
     
@@ -95,6 +99,7 @@ public class SaveLoadManager : MonoBehaviour
 
     public bool HasEnoughBook()
     {
-        return BookList.Count >= 4;
+        Debug.Log(BookList.Count);
+        return BookList.Count >= 3;
     }
 }

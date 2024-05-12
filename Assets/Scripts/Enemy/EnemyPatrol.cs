@@ -107,10 +107,10 @@ public class EnemyPatrol : MonoBehaviour, IStunable
     IEnumerator StunCoroutine()
     {
         isStun = true;
-        anim.Play("Idle");
+        if (anim) anim.Play("Idle");
         yield return new WaitForSeconds(2f);
 
-        anim.Play("Move");
+        if (anim) anim.Play("Move");
         isStun = false;
     }
 

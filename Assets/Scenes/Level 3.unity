@@ -6602,6 +6602,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5782272248241645904, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
+      propertyPath: id
+      value: 946fa10b-b697-4845-b6fd-e9f6c7ee97d0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782272248241645904, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
       propertyPath: text
       value: 'It takes something out of the our people.
 

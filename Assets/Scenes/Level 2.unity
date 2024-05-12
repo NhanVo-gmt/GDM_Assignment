@@ -16317,6 +16317,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5782272248241645904, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
+      propertyPath: id
+      value: 26f62dd8-fdb9-4660-9cad-0c17f6d9468a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782272248241645904, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
       propertyPath: text
       value: ' I saw a pair of big black arms reaching out. I''m so scared that I
         cannot run.

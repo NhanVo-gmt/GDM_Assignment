@@ -129744,6 +129744,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5782272248241645904, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
+      propertyPath: id
+      value: f9572ce4-bff1-4a75-a443-2d4a502bab35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782272248241645904, guid: d6b99121100740b4f8909f6a1b4cb685, type: 3}
       propertyPath: text
       value: "<color=#ff0000>Oh dear, don't run away from me.\n\nThe fun just begun.
         \n</color>"
